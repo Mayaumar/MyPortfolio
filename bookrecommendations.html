@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Book recommendations</title>
+    <link rel="stylesheet" type="text/css" href="recommendations.css">
+    <style>
+    table,th,td {
+  border : 1px solid black;
+}
+th,td {
+  padding: 5px;
+  text-align: center;
+}
+.table{
+    display: flex;
+    justify-content: center;
+  }
+    </style>
+    <script>
+    function getRecommendations(){
+      var txtName = document.getElementById("Choice");
+      var txtOutput = document.getElementById("DisplayHere");
+      var name = txtName.value;
+      var image = document.getElementById("book");
+      if (name=="Romance") {
+      ((txtOutput.value = "The FlatShare") && (image.src="images/IMG_7651.jpg"));
+      }
+      else if (name=="Thriller") {
+      ((txtOutput.value = "The Sister") && (image.src="images/FullSizeRender.jpg"));
+      }
+      else if (name=="Crime") {
+      ((txtOutput.value = "A good girl's guide to murder") && (image.src="images/crime.jpg"));
+      }
+      else if (name=="Mystery") {
+      ((txtOutput.value = "Three Little Lies") && (image.src="images/mysteryy.jpg"));
+      }
+      else if (name=="Historical Fiction") {
+      ((txtOutput.value = "The Kite Runner") && (image.src="images/history.jpg"));
+      }
+      else if (name=="Young Adult") {
+      ((txtOutput.value = "Girl in Pieces") && (image.src="images/YA.jpg"));
+      }
+      else if (name=="Literary Fiction") {
+      ((txtOutput.value = "The Forty Rules of Love") && (image.src="images/literary.jpg"));
+      }
+      else if (name=="Novel") {
+      ((txtOutput.value = "Pir-e-Kamil: The Perfect Mentor") && (image.src="images/novel.jpg"));
+      }
+      else {
+        txtOutput.value = "Book not found";
+      }
+}
+function getDetails(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      processDetails(xhttp);
+    }
+  };
+  xhttp.open("GET", "http://localhost/bookDetails.xml", true);
+  xhttp.send();
+}
+function processDetails(xhttp){
+  var xml = xhttp.responseXML;
+  var itemArray = parseXML(xml);
+  display(itemArray);
+}
+function parseXML(xml){
+  var itemElements = xml.getElementsByTagName("information");
+  var itemArray = [];
+
+  for( var i=0; i< itemElements.length; i++){
+    var item={};
+
+    item.title= itemElements[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+    item.Author= itemElements[i].getElementsByTagName("Author")[0].childNodes[0].nodeValue;
+    item.Genre= (itemElements[i].getElementsByTagName("Genre")[0].childNodes[0].nodeValue);
+    item.Rating= itemElements[i].getElementsByTagName("Rating")[0].childNodes[0].nodeValue;
+    item.Review= itemElements[i].getElementsByTagName("Review")[0].childNodes[0].nodeValue;
+    item.link=   itemElements[i].getElementsByTagName("link")[0].childNodes[0].nodeValue;
+    itemArray.push(item);
+  }
+  return itemArray;
+}
+function display(itemArray){
+  var table = "<table border='1'>";
+  var txtName = document.getElementById("Choice");
+  var name = txtName.value;
+  table += "<tr><th>Title</th><th>Author</th><th>Genre</th><th>Rating</th><th>Review</th><th>Link</th></tr>";
+  for(var i = 0; i<itemArray.length;i++){
+    if(name==itemArray[i].Genre){
+    table += "<tr>";
+    table += "<td>" + itemArray[i].title + "</td>";
+    table += "<td>" + itemArray[i].Author + "</td>";
+    table += "<td>" + itemArray[i].Genre + "</td>";
+    table += "<td>" + itemArray[i].Rating + "</td>";
+    table += "<td>" + itemArray[i].Review + "</td>";
+    table += "<td>" +"<a target= _blank href="+itemArray[i].link+">"+"click here"+"</a>" + "</td>";
+    table += "</tr>";
+}
+else {
+  document.getElementById("demo")=='';
+}
+  }
+  table += "</table>";
+  table += "<br />";
+  var receipt = document.getElementById("demo");
+  receipt.innerHTML = table;
+}
+    </script>
+  </head>
+  <body>
+    <header>
+      <h2>A Book Lover's Recommendations</h2>
+    </header>
+    <br> <br> <br>
+<div class="recommend">
+    <form name="form1" method="get">
+      <h2>Pick One of the Following Categories:</h2>
+      <ul style="font-size: 22px;">
+        <li>Romance</li>
+        <li>Thriller</li>
+        <li>Crime</li>
+        <li>Mystery</li>
+        <li>Historical Fiction</li>
+        <li>Young Adult</li>
+        <li>Literary Fiction</li>
+        <li>Novel</li>
+      </ul>
+      <h3> Your choice: </h3>
+      <select name="books" id="Choice" style="height: 60px; font-size: 22px;">
+      <option value="">Select</option>
+      <option value="Romance">Romance</option>
+      <option value="Thriller">Thriller</option>
+      <option value="Crime">Crime</option>
+      <option value="Mystery">Mystery</option>
+      <option value="Historical Fiction">Historical Fiction</option>
+      <option value="Young Adult">Young Adult</option>
+      <option value="Literary Fiction">Literary Fiction</option>
+      <option value="Novel">Novel</option>
+      </select>
+      <br><br><button type="button" name="submit" onclick="getRecommendations()" style="height: 30px; font-size: 18px;">Find Books</button>
+      <br><br>
+       <input type="text" id="DisplayHere" value="" size="40px" style="height: 30px; background-color: white; color: black; font-size: 18px; text-align: center;"><br><br>
+       <img id="book" src="" alt="" style="width: 400px">
+       <br>
+       <button type="button" name="" onclick="getDetails()" style="font-size: 18px">Click here for more details</button>
+       <div class="bookdetails">
+         <table id="demo">
+         </table>
+       </div>
+    </form>
+</div>
+  </body>
+</html>

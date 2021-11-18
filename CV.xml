@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="CV.xsl" ?>
+<!DOCTYPE myCV [
+<!ELEMENT myCV (title*, myDetails*, workExperience*, educationLevels*, skills*, Hobbies*, Languages*)>
+<!ELEMENT title (name)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT myDetails (dateOfBirth, address, email, phoneNumber)>
+<!ELEMENT dateOfBirth (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phoneNumber (#PCDATA)>
+<!ELEMENT workExperience (experience)>
+<!ELEMENT experience (timePeriod, JobTitle, briefDescription, jobDescription)>
+<!ELEMENT timePeriod (#PCDATA)>
+<!ELEMENT JobTitle (#PCDATA)>
+<!ELEMENT briefDescription (#PCDATA)>
+<!ELEMENT jobDescription (#PCDATA)>
+<!ELEMENT educationLevels (Level)>
+<!ELEMENT Level (timeframe, institutionName, educationLevel)>
+<!ELEMENT timeframe (#PCDATA)>
+<!ELEMENT institutionName (#PCDATA)>
+<!ELEMENT educationLevel (#PCDATA)>
+<!ELEMENT skills (skillName)>
+<!ELEMENT skillName (#PCDATA)>
+<!ELEMENT Hobbies (hobbieName, hobbieName1)>
+<!ELEMENT hobbieName (#PCDATA)>
+<!ELEMENT hobbieName1 (#PCDATA)>
+<!ELEMENT Languages (LanguageName, LanguageName1,LanguageName2)>
+<!ELEMENT LanguageName (#PCDATA)>
+<!ELEMENT LanguageName1 (#PCDATA)>
+<!ELEMENT LanguageName2 (#PCDATA)>
+]>
+
+
+<myCV>
+
+  <title>
+    <name>Mahin Umer Farooq</name>
+  </title>
+
+  <myDetails>
+    <dateOfBirth>10-07-2000</dateOfBirth>
+    <address>Al Qasimiya Sharjah</address>
+    <email>muf903@uowmail.edu.au</email>
+    <phoneNumber>0506505756</phoneNumber>
+  </myDetails>
+
+  <workExperience>
+    <experience>
+      <timePeriod>January 2019 - Current</timePeriod>
+      <JobTitle>Data Entry and Customer Support</JobTitle>
+      <briefDescription>Worked part-time at my father's company while studying.
+I thought it would be a great experience along with studying.</briefDescription>
+      <jobDescription>Entry level tasks maintaning company database and documents. Creation of documents required for entry permits and tender quotations.</jobDescription>
+    </experience>
+  </workExperience>
+
+  <educationLevels>
+    <Level>
+      <timeframe>March 2009 - March 2012</timeframe>
+      <institutionName>New Indian Model School</institutionName>
+      <educationLevel>Primary and Secondary Schooling</educationLevel>
+    </Level>
+    <Level>
+      <timeframe>September 2012 - June 2018</timeframe>
+      <institutionName> Al Ansar Interschool School, Sharjah</institutionName>
+      <educationLevel>High School</educationLevel>
+    </Level>
+    <Level>
+      <timeframe>September 2018 - Current</timeframe>
+      <institutionName>University of Wollongong in Dubai</institutionName>
+      <educationLevel>Undergraduate Degree</educationLevel>
+    </Level>
+  </educationLevels>
+
+  <skills>
+    <skillName>Data Management,
+      Java Basic, C Programming Language, HTML and JavaScript, MS Office, Content Creation, Book Reviewing.
+   </skillName>
+  </skills>
+
+  <Hobbies>
+    <hobbieName>Reading/ Writing</hobbieName>
+    <hobbieName1>Book Blogging and Reviewing</hobbieName1>
+  </Hobbies>
+
+  <Languages>
+    <LanguageName>English</LanguageName>
+    <LanguageName1>Urdu</LanguageName1>
+    <LanguageName2>Sindhi</LanguageName2>
+  </Languages>
+</myCV>

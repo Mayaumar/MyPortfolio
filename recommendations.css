@@ -1,0 +1,38 @@
+header{
+
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  padding: 0px 5%;
+  text-align: center;
+  font-size: 29px;
+  font-family: times new roman;
+  line-height: 100px;
+
+
+}
+
+body{
+  background: url('https://ebookfriendly.com/wp-content/uploads/2013/11/Books-Trees-540x405.jpg') ;
+
+
+
+
+}
+
+.recommend{
+  text-align: center;
+ height: auto;
+ color: white;
+ color: black;
+ background-color: white;
+
+ margin: auto;
+ width: 50%;
+ border: 3px solid;
+ padding: 10px;
+
+
+}

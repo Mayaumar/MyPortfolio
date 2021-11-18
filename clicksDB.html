@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Clicks</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+	   		.container {
+	   			width: 75%;
+	   			height: 100%;
+	   			padding-top: 45px;
+	   			padding-left: 45px;
+	   		}
+	  </style>
+    <script type="text/javascript">
+
+    var database = openDatabase('mydbase','1.0','Test DB', 2 * 1024 * 1024 );
+    function createandDisplayDB() {
+      database.transaction(function(tx){
+        tx.executeSql('CREATE TABLE IF NOT EXISTS RESPONSES(id INTEGER PRIMARY KEY, EMAIL, COMMENTS)');
+      });
+    }
+    function validateForm(){
+      var cname= document.getElementById("Email").value;
+      if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(cname) == false) {
+        alert("Email format invalid");
+        return false;
+      }
+      addList();
+    }
+    function addList(){
+      var emails = document.getElementById("Email").value;
+      var commentss = document.getElementById("comments").value;
+      var query = `INSERT INTO RESPONSES (EMAIL, COMMENTS) VALUES ("${emails}","${commentss}")`;
+				alert(query);
+				database.transaction(function(tx){
+			   		tx.executeSql(query);
+				});
+       alert("Thank you for your feedback!");
+			}
+			function clearDatabase()
+		  {
+		  		database.transaction(function (tx) {
+			   		tx.executeSql('DELETE FROM RESPONSES');
+				});
+    }
+    </script>
+  </head>
+  <style>
+  .clicks{
+    text-align: center;
+   height: auto;
+   color: white;
+   color: black;
+   background-color: white;
+   margin: auto;
+   width: 50%;
+   border: 3px solid;
+   padding: 10px;
+  }
+  .table{
+      display: flex;
+      justify-content: center; /* Center Horizontally */
+    }
+  table,th,td {
+   border : 1px solid black;
+   text-align: center;
+   font-style: bold;
+ }
+
+  header{
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    padding: 0px 5%;
+    text-align: center;
+    font-size: 29px;
+    font-family: times new roman;
+    line-height: 100px;
+  }
+  body{
+    background: url('https://media.istockphoto.com/photos/abstract-blurred-simple-beige-and-tan-color-background-with-white-picture-id1046544350?k=6&m=1046544350&s=612x612&w=0&h=WQ8A-i0qxFJIuPM_4SNoodftAj1K_axuwMlxLEu0ogI=') ;
+  }
+  </style>
+  <script>
+  function getRandomImage(){
+    var images=new Array();
+    images[0]= "images/ED61C5C7-2E22-4AE0-9EAC-42D5FA709BC5.jpg";
+    images[1]= "images/PHOTO-2020-10-24-17-53-27.jpg";
+    images[2]= "images/shades.JPG";
+    images[3]= "images/CA5E6FD8-A92A-44F2-8D47-8AA285196AC8.jpg";
+    var number = Math.floor(Math.random()*images.length);
+      return document.getElementById("result").innerHTML = '<img src="'+images[number]+'" style="width:60%"/>';
+  }
+  </script>
+<center>  <body onload="createandDisplayDB();">
+    <header>
+    <center><h2>My Best Clicks</h2>
+    </header>  <br>
+      <button onclick="getRandomImage()" style="height: 30px; font-size: 18px;">Generate Images</button>
+      <br><br>
+      <span id="result" align="center"></span>
+      <br><br>
+      <div class="clicks">
+      <form onsubmit="validateForm()" method="post">
+          <h3> Enter your email:</h3>
+         <input type="text" name="email" id="Email" value="" size="30px"><br>
+        <h3>  Your thoughts on the image generated:</h3><br>
+          <textarea name="comments" id="comments" rows="4" cols="40" required></textarea><br>
+          <input type="submit" style="height: 30px; font-size: 18px;"/>
+          <button type="button" onclick="clearDatabase()" name="button" style="height: 30px; font-size: 18px;">Clear</button>
+      </form>
+</div>
+  </body>
+</html>

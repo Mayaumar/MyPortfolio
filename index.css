@@ -1,0 +1,133 @@
+body{
+  background: #C0C0C0 url('http://wizzley.com/static/img/bg/texture8.png');
+  margin: 0px;
+  padding: 0px;
+}
+
+section{
+  width: 100%;
+  height: 100vh;
+  background-image: url("61ed00c7-325d-46ff-bc9b-2dca84e85e0c.JPG");
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-radius: 20%;
+
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  padding: 0px 5%;
+  border-radius: 20%;
+
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 90px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 30%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: black;
+  color: white;
+}
+
+header ul{
+  display: flex;
+}
+
+header ul li a{
+  margin: 35px;
+  font-family: myriad pro regular;
+  color: #505050;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.logo{
+  font-family: RoadTest;
+  color: #000000;
+  font-size: 22px;
+
+}
+.active{
+  font-weight: bold;
+  color: #2d2a2a;
+}
+
+.about{
+  text-align: center;
+  border: 3px solid white;
+  font-size: 20px;
+  color: white;
+  font-family: chalkduster;
+
+
+}
+
+.sample{
+  line-height: 700px;
+  height: 200px;
+  right: 50px;
+  position: absolute;
+  font-family: chalkduster;
+  text-align: center;
+  line-height: 1.8;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+
+.dropbtn {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  font-family: chalkduster;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: black;}

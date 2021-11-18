@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <title></title>
+
+    <script>
+    var slideIndex = 1;
+ showSlides(slideIndex);
+ function plusSlides(n) {
+   showSlides(slideIndex += n);
+ }
+ function currentSlide(n) {
+   showSlides(slideIndex = n);
+ }
+ function showSlides(n) {
+   var i;
+   var slides = document.getElementsByClassName("OMANIMAGES");
+   var dots = document.getElementsByClassName("demo");
+   var captionText = document.getElementById("caption");
+   if (n > slides.length) {slideIndex = 1}
+   if (n < 1) {slideIndex = slides.length}
+   for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";
+   }
+   for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex-1].style.display = "block";
+   dots[slideIndex-1].className += " active";
+   captionText.innerHTML = dots[slideIndex-1].alt;
+ }
+     </script>
+
+  </head>
+  <body>
+    <div class="country1">
+      <div id="Saudi-Arabia">
+      <ins>  <b><h1>Saudi Arabia</h1></ins>
+        <i>Ive been to KSA several times. The first time was when I was a kid so I dont remember much. the last time was in december 2019, my last trip before the pandemic. It was most definelty the best 2 weeks of my life.
+        I properly experienced every moment of that trip, the hotel stay, the mecca medina life, the studying in my hotel room for the upcoming final exams. <br/> <br/> Here are some of the snapshots from that trip:</i>
+        <br/></b>
+      </div>
+    <br/><br/><br/>
+    <table class="tcenter"border="4" style="width:85%";>
+      <tr>
+        <td> <img src="images/hotels.png" alt="hotel" style="width:75%; height:330px;" ></td>
+        <td> <h3>Luxurious Hotel Stay</h3>
+          <p>The hotels in Makkah and Medina have always been a big part  of planning the most convenient and suitable trip. Maybe cause all a person really does there is visit the grand masjids and if your hotel is far away, it can really distrupt your routine. For the majority of our trips to KSA, we have been blessed with the opportunities of living in hotels connected to the Mecca Clock Tower, a grand and beautiful sight in Makkah. It just adds to the entire scenery making it look as mesmerizing as ever!</p></td>
+        </tr>
+        <tr>
+          <td><h3>Evening Views</h3>
+          <p>Imagine being able to lay down on a carpetted floor, watching the moon go down and sky changing into a thousand different colors in the most peaceful, serene and safe city in the world, with the soft winds and hums of the people around you. In a city where there is no rush. People live on the same rhythm. such is the life in Medina. no matter how long you stay there, its never enough. Got to enjoy and live this peaceful life there for 4-5 days. Its amazing how quickly I got into a routine there and how hard it was that behind.  </p></td>
+          <td><img src="images/shades.jpg" alt="shades" style="width:75%; height:330px;"></td>
+        </tr>
+        <tr>
+          <td><img src="images/masjidn.png" alt=masjid style="width:75%; height:330px;"></td>
+          <td><h3>Last Nights</h3>
+          <p>Masjid an Nabawi is so big that even though I stayed there for so many days and my hotel was right in front of the masjid and we spent entire days there, I never saw the green dome until my last night there. It was a full round circle to reach there but the view was definetly worth it. We planned to have dinner there late on our last night in medina but because of the freezing december weather, we had to cancel our plans. but it still became one of the most memorable nights of our trip, one that I wish i could go back to even now :( </p></td>
+        </tr>
+        <tr>
+          <td><h3>Train Rides</h3>
+          <p>Ever been to historical sights? Ever seen places that have been preserved to show us the lives of our ancestors, their lives so different from ours, so much harder and more difficult than we could ever comprehend. In the train ride from Medina to Mecca, we came across huge desert lands, and i couldnt help but wonder about the people who lived there, the wars that took place on those grounds, the people who lost their familes to those grounds, and how regardless of this, they never gave up, they never lost hope, they kept fighting and living, so arent they to be thanked for everything that we have today?  .</p></td>
+          <td> <img src="images/66B733B7-7CAF-4F39-B3CF-1B999BF1A121.JPG" alt="train" style="width:75%; height:330px;"></td>
+        </tr>
+    </table>
+<br/><br/>
+    <div class="Pakistan">
+      <div id="PakistanHead">
+        <ins><h1>Pakistan</h1></ins>
+        Growing up Ive been to Pakistan so many times that I can't even count. Most of these trips i dont remember because I was a kid
+        but the ones I do remember have all been pretty much the same with all of them following the same pattern:
+
+        <dl>
+          <dt> => shopping for the trip &nbsp &nbsp &nbsp &nbsp => excitement for the trip &nbsp &nbsp &nbsp &nbsp
+            => meeting relatives after so long &nbsp &nbsp &nbsp &nbsp => family gatherings</dt><br/>
+          <dt> <= more family gatherings &nbsp &nbsp &nbsp &nbsp <= getting sick &nbsp &nbsp &nbsp &nbsp
+            <= getting even more sick &nbsp &nbsp &nbsp &nbsp <= wanting to come back home</dt><br/>
+          <dt> => counting days to come home &nbsp &nbsp &nbsp &nbsp => coming home &nbsp &nbsp &nbsp &nbsp
+            => swearing to never go back again &nbsp &nbsp &nbsp &nbsp => And repeat</dt><br/>
+      </dl>
+      </div>
+      <div class="row">
+        <div class="column">
+        <table border="2" style="width: 600%">
+        <tr>
+        <td >
+      <img src="images/IMG_3006.jpg" alt="airport" style="width:60%">
+      '<img src="'+images[number]+'" style="width:60%"/>'
+      </td>
+      <td style="width: 40%; text-align: center; font-size: 18px;">
+      <p> From all those times, ive only travelled alone to pakistan twice and i think its safe to say, those were the two best trips of my life.
+      Everthing from the time spent at the dubai international airport to the days spent with my sister and her friends, the shopping spree and the ride back home, I loved all of it</p>
+      <p> I spent about 5 days each trip and even though i did pretty much the same things both times, which were lots of shopping with my sisters specially books/ watching movies/ visiting my aunt and uncle/ salon visits, i would happily go back again cause of how peaceful and relaxing these trips were.
+      </td>
+      </tr>
+      </table>
+    </div>
+    </div>
+    </div>
+
+    <div class="Oman">
+     <div id="omanhead">
+    <ins>  <h1>Oman</h1> </ins>
+      <i>  Id like to call Salalah the heaven on earth. Its such a mesmerizing place specially in the Autumn season called as The Khareef. The rainy days start such incredible waterfalls in mountain areas that leave you speechless! There is no need for captions or long paragraphs to describe the places, the pictures speak for themselves!
+    </i>
+    </div>
+    <br/>
+    <div class="container">
+     <div class="OMANIMAGES">
+        <div class="numbertext"></div>
+          <img src="images/ED61C5C7-2E22-4AE0-9EAC-42D5FA709BC5.jpg" style="width:90%; height:550px;">
+      </div>
+      <div class="OMANIMAGES">
+        <div class="numbertext"></div>
+          <img src="images/PHOTO-2020-10-24-17-53-27.jpg" style="width:90%; height:550px;">
+      </div>
+      <div class="OMANIMAGES">
+        <div class="numbertext"></div>
+          <img src="images/CA5E6FD8-A92A-44F2-8D47-8AA285196AC8.jpg" style="width:90%; height:550px;">
+      </div>
+      <div class="OMANIMAGES">
+        <div class="numbertext"></div>
+          <img src="images/381764E2-6B49-44D3-8140-022F7F13C9AC.JPG" style="width:90%; height:550px;">
+      </div>
+      <div class="OMANIMAGES">
+        <div class="numbertext"></div>
+          <img src="images/PHOTO-2020-10-24-17-53-29.jpg" style="width:90%; height:550px;">
+      </div>
+      <div class="OMANIMAGES">
+        <div class="numbertext"></div>
+          <img src="images/PHOTO-2020-10-24-17-53-30.jpg" style="width:90%; height:550px;">
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="images/ED61C5C7-2E22-4AE0-9EAC-42D5FA709BC5.jpg" style="width:90%; height: 200px;" onclick="currentSlide(1)" alt="s1">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/PHOTO-2020-10-24-17-53-27.jpg" style="width:90%; height: 200px;" onclick="currentSlide(2)" alt="s2">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/CA5E6FD8-A92A-44F2-8D47-8AA285196AC8.jpg" style="width:90%; height: 200px;" onclick="currentSlide(3)" alt="s3">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/381764E2-6B49-44D3-8140-022F7F13C9AC.JPG" style="width:90%; height: 200px;" onclick="currentSlide(4)" alt="s4">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/PHOTO-2020-10-24-17-53-29.jpg" style="width:90%; height: 200px;" onclick="currentSlide(5)" alt="s5">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/PHOTO-2020-10-24-17-53-30.jpg" style="width:90%; height: 200px;" onclick="currentSlide(6)" alt="s6">
+        </div>
+      </div>
+    </div>
+
+    <br/><br/><br/><br/>
+
+
+    <div class="Malaysia">
+      <div id="Malaysia-head">
+        <ins>  <h1>Malaysia</h1> </ins>
+        <p>Ive been to malaysia only once back in 2007. I dont remember all the details of the trip since I was just 7 years old. but i do remember a few highlights. I remember a hotel high up on a mountain. I remember a beautiful water park where we spent 2 whole days. I remember an old lady's antique house. I remember living in a villa in a small town and attending their carnival. I remember two tall twin-towers. I remember a huge boat that made everyone nauseous. I remember a long bridge above a park that was very scary to walk on. I remember a temple that was never-ending. I remember craving junk food. I remember rainy days outside a mall entrance waiting for our ride. And I remember those 15 days being the best days of my childhood, better than any other childhood trip ever and certainly a memorable one.</p>
+        <div class="mrow">
+      <div class="mcolumn">
+        <img src="https://static.asiawebdirect.com/m/kl/portals/visit-malaysia-com/homepage/top10-attractions/pagePropertiesImage/malaysia-attractions-top-10.jpg">
+        <img src="https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/Slime-Time.jpg?fit=1200%2C900&ssl=1">
+        <img src="https://www.planetware.com/wpimages/2019/10/malaysia-top-attractions-kek-lok-si-temple.jpg">
+        <img src="https://namasteindiatrip.com/blog/wp-content/uploads/2019/05/Batu-Caves.jpg">
+        <img src="https://images.thrillophilia.com/image/upload/s--L-vwtTtu--/c_fill,dpr_1.5,f_auto,fl_strip_profile,g_center,h_450,q_auto,w_753/v1/images/photos/000/081/738/original/1464073912_The_Bridge_in_Sunway_Lagoon_Theme_Park.jpg.jpg">
+        <img src="https://images.thrillophilia.com/image/upload/s--qTaSBuwy--/c_fill,dpr_1.5,f_auto,fl_strip_profile,g_center,h_450,q_auto,w_753/v1/images/photos/000/073/969/original/Christ_Church_Front_View.jpg.jpg">
+        <img src="https://s.abcnews.com/images/Health/WireAP_f4516e900e19486f8d95c82fe738f372_16x9_1600.jpg">
+      </div>
+      <div class="mcolumn">
+        <img src="https://i.pinimg.com/originals/74/bd/6c/74bd6c4dd246503c55c379cfde95e638.jpg">
+        <img src="https://apicms.thestar.com.my/uploads/images/2020/05/30/700804.jpg">
+        <img src="https://stylesatlife.com/wp-content/uploads/2014/11/Pulau-Tioman_malaysia-tourist-places.jpg">
+        <img src="https://d1bvpoagx8hqbg.cloudfront.net/originals/chilly-breezy-air-nice-getaway-kuala-lumpur-562a0e3a0c9cdb0125130ec304615eac.jpg">
+        <img src="https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2016/01/NLL-Primeval.jpg?fit=800%2C600&ssl=1">
+        <img src="https://theculturetrip.com/wp-content/uploads/2018/08/shutterstock_68567854.jpg">
+      </div>
+      <div class="mcolumn">
+        <img src="https://s.abcnews.com/images/Health/WireAP_f4516e900e19486f8d95c82fe738f372_16x9_1600.jpg">
+        <img src="https://images.thrillophilia.com/image/upload/s--qTaSBuwy--/c_fill,dpr_1.5,f_auto,fl_strip_profile,g_center,h_450,q_auto,w_753/v1/images/photos/000/073/969/original/Christ_Church_Front_View.jpg.jpg">
+        <img src="https://namasteindiatrip.com/blog/wp-content/uploads/2019/05/Batu-Caves.jpg">
+        <img src="https://images.thrillophilia.com/image/upload/s--L-vwtTtu--/c_fill,dpr_1.5,f_auto,fl_strip_profile,g_center,h_450,q_auto,w_753/v1/images/photos/000/081/738/original/1464073912_The_Bridge_in_Sunway_Lagoon_Theme_Park.jpg.jpg">
+        <img src="https://www.planetware.com/wpimages/2019/10/malaysia-top-attractions-kek-lok-si-temple.jpg">
+        <img src="https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/Slime-Time.jpg?fit=1200%2C900&ssl=1">
+        <img src="https://static.asiawebdirect.com/m/kl/portals/visit-malaysia-com/homepage/top10-attractions/pagePropertiesImage/malaysia-attractions-top-10.jpg">
+      </div>
+      <div class="mcolumn">
+        <img src="https://theculturetrip.com/wp-content/uploads/2018/08/shutterstock_68567854.jpg">
+        <img src="https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2016/01/NLL-Primeval.jpg?fit=800%2C600&ssl=1">
+        <img src="https://d1bvpoagx8hqbg.cloudfront.net/originals/chilly-breezy-air-nice-getaway-kuala-lumpur-562a0e3a0c9cdb0125130ec304615eac.jpg">
+        <img src="https://stylesatlife.com/wp-content/uploads/2014/11/Pulau-Tioman_malaysia-tourist-places.jpg">
+        <img src="https://apicms.thestar.com.my/uploads/images/2020/05/30/700804.jpg">
+        <img src="https://i.pinimg.com/originals/74/bd/6c/74bd6c4dd246503c55c379cfde95e638.jpg">
+      </div>
+    </div>
+      </div>
+    </div>
+  </body>
+</html>

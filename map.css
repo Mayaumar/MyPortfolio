@@ -1,0 +1,181 @@
+header{
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  padding: 0px 5%;
+  text-align: center;
+  font-size: 29px;
+  font-family: chalkduster;
+  line-height: 100px;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+body{
+  background: url('https://i.pinimg.com/originals/e9/13/18/e913182ddfdc325c1df0e96a60ecb43c.jpg') ;
+  border-top: solid;
+  border-bottom: solid;
+  border-left: solid;
+  border-right: solid;
+  margin: 35px;
+}
+.places{
+  align-items: center;
+  text-align: center;
+  font-family: chalkduster;
+  font-size: 18px;
+  color: black;
+}
+.country1{
+  align-items: center;
+  text-align: center;
+  font-family: chalkduster;
+  font-size: 15px;
+  color: black;
+}
+#Saudi-Arabia{
+  font-size: 22px;
+  font-family: times new roman;
+}
+.country2{
+  align-items: center;
+  text-align: center;
+  font-family: arial;
+  font-size: 20px;
+  color: black;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+}
+.OMANIMAGES§ {
+  display: none;
+}
+.cursor {
+  cursor: pointer;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: relative;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 16.66%;
+}
+.demo {
+  opacity: 0.6;
+}
+.active,
+.demo:hover {
+  opacity: 1;
+}
+#omanhead{
+  align-items: center;
+  text-align: center;
+  font-family: times new roman;
+  font-size: 22px;
+}
+table.tcenter{
+  margin-left: auto;
+  margin-right: auto;
+  border-style: 8px double black ;
+  border-right: solid black;
+  border-bottom: solid black;
+  border-top: solid black;
+  border-left: solid black;
+}
+
+#PakistanHead{
+  align-items: center;
+  text-align: center;
+  font-family: times new roman;
+  font-size: 22px;
+  font-style: bold;
+}
+
+.row {
+  display: flex;
+}
+.column {
+  align-content: left;
+
+}
+#Malaysia-head{
+  align-items: center;
+  text-align: center;
+  font-family: times new roman;
+  font-size: 22px;
+}
+.mrow {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.mcolumn {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+.mcolumn img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  -webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
+}
+@media screen and (max-width: 800px) {
+  .mcolumn {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mcolumn {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
